@@ -1,0 +1,26 @@
+cloudfoundry {
+  application = 'smarthome-app'
+  hosts = [application]
+  host = application
+  buildpack = 'https://github.com/cloudfoundry/staticfile-buildpack.git'
+  file = file('.')
+  memory = 64
+  healthCheckTimeout = 180
+  trustSelfSignedCerts = true
+  variants = ['-blue', '-green']
+  env = [
+    "LANG"              : "en_US.UTF-8",
+    "TEAM_NAME"         : "toad",
+    "CF_STARTUP_TIMEOUT": "360",
+    "APP_NAME"      : application,
+  ]
+}
+if (project.hasProperty('pivotal')) {
+  cloudfoundry {
+    target = 'https://api.run.pivotal.io'
+    organization = 'yaas-pl'
+    space = 'development'
+    domain = 'cfapps.io'
+    instances = 1
+  }
+}

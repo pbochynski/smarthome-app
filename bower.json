@@ -1,0 +1,19 @@
+{
+  "name": "smarthome-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Bochynski",
+    "Piotr <piotr.bochynski@hybris.de>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
