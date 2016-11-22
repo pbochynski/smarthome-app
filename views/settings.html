@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Regulator</h3>
+        </div>
+        <div class="form-group">
+            <label for="temperature">Temperature:</label>
+            <input ng-model="temperature" type="number" min="10" max="35" step="0.1" class="form-control"
+                   placeholder="temperature" id="temperature"
+                   aria-describedby="basic-addon1" title="Set desired temperature in the living room"
+                   ng-value="regulator.temperature">
+            <label for="deviation">Deviation:</label>
+            <input ng-model="deviation" type="number" min="0" max="5" step="0.1" class="form-control"
+                   placeholder="deviation" id="deviation"
+                   aria-describedby="basic-addon2" title="Set deviation" ng-value="regulator.deviation">
+            <label for="sensor">Sensor:</label>
+            <input ng-model="sensor" ng-value="regulator.sensor" class="form-control"
+                   placeholder="chipId" id="sensor" aria-describedby="basic-addon2" title="Set chipId">
+        </div>
+        <button type="button" class="btn btn-primary" ng-click="onAuto()">Update</button>
+    </div>
+
+
+</div>
+

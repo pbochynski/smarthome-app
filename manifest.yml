@@ -1,0 +1,6 @@
+---
+applications:
+- name: smart-app
+  memory: 64M
+  host: smart-app
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
